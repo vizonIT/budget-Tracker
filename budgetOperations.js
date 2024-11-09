@@ -1,43 +1,43 @@
 // Part 1: Basic Budget Calculator
 
-// let income;
-// let expense;
+let income;
+let expense;
 
-// income = prompt(`Please enter a positive value for income`);
-// console.log(income);
+income = prompt(`Please enter a positive value for income`);
+console.log(income);
 
-// expense = prompt(`Please enter a positive value for expense`);
+expense = prompt(`Please enter a positive value for expense`);
 
-// const balance = income - expense;
+const balance = income - expense;
 
-// if (balance < 0) {
-//   console.log(
-//     `We had an income of ${income} naira; expense of ${expense} naira and a loss of ${Math.abs(
-//       balance
-//     )} naira`
-//   );
-//   alert(
-//     `We had an income of ${income} naira; expense of ${expense} naira and a loss of ${Math.abs(
-//       balance
-//     )} naira`
-//   );
-// }
-// if (balance === 0) {
-//   console.log(
-//     `We had an income of ${income} naira; expense of ${expense} naira and we made no gain`
-//   );
-//   alert(
-//     `We had an income of ${income} naira; expense of ${expense} naira and we made no gain`
-//   );
-// }
-// if (balance > 0) {
-//   console.log(
-//     `We had an income of ${income} naira; expense of ${expense} naira and we made profit of ${balance} naira`
-//   );
-//   alert(
-//     `We had an income of ${income} naira; expense of ${expense} naira and we made profit of ${balance} naira`
-//   );
-// }
+if (balance < 0) {
+  console.log(
+    `We had an income of ${income} naira; expense of ${expense} naira and a loss of ${Math.abs(
+      balance
+    )} naira`
+  );
+  alert(
+    `We had an income of ${income} naira; expense of ${expense} naira and a loss of ${Math.abs(
+      balance
+    )} naira`
+  );
+}
+if (balance === 0) {
+  console.log(
+    `We had an income of ${income} naira; expense of ${expense} naira and we made no gain`
+  );
+  alert(
+    `We had an income of ${income} naira; expense of ${expense} naira and we made no gain`
+  );
+}
+if (balance > 0) {
+  console.log(
+    `We had an income of ${income} naira; expense of ${expense} naira and we made profit of ${balance} naira`
+  );
+  alert(
+    `We had an income of ${income} naira; expense of ${expense} naira and we made profit of ${balance} naira`
+  );
+}
 
 // Part 2: Enhanced Budget Tracker
 
@@ -48,23 +48,30 @@ let expenses = [];
 // Function to add an amount to either income or expense
 function addAmount(type, amount) {
   // TODO: Validate amount and add it to the correct array
-  if (type === incomes) {
-    incomes.Push(amount);
+
+  if (type === "incomes") {
+    incomes.push(amount);
+    incomes = type;
   }
-  if (type === expenses) {
-    expenses.Push(amount);
+  if (type === "expenses") {
+    expenses.push(amount);
+    // console.log(expenses);
+    expenses = type;
   }
 
   return type;
 }
 
-const resultss = addAmount(expenses, 10);
+const resultss = addAmount("expenses", 10);
 console.log(resultss);
 
 // Function to calculate the total of an array
 function calculateTotal(arr) {
   let total = 0;
   // TODO: Use a for loop to calculate the total
+  for (let total = 0; total < arr.length; total++) {
+    const element = arr[total];
+  }
   return total;
 }
 
